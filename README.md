@@ -99,6 +99,17 @@ id,label
 
 Copy `sample_submission.csv`, which already has all 8,100 ids in it, leave the
 `id` column alone, and overwrite the `label` column with your own answers.
+**[MAKING_YOUR_SUBMISSION.md](MAKING_YOUR_SUBMISSION.md)** shows the code for
+this in Python and MATLAB.
+
+Before you upload, check the file:
+
+```bash
+python check_submission.py my_submission.csv
+```
+
+It tells you whether the file will be accepted, and what to fix if not. It takes
+a second and it saves you a wasted round.
 
 **Upload it to the Canvas assignment for that round.** One upload per team.
 Upload as often as you like before the deadline; the most recent one is the one
