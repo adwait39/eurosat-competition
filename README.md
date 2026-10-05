@@ -116,11 +116,11 @@ fault.
 |---|---|
 | Mon 5 Oct | Data released |
 | Mon 2 Nov | Round 1 predictions due on Canvas |
-| Wed 4 Nov | Round 1 scores and leaderboard emailed |
+| Wed 4 Nov | Round 1 scores and leaderboard posted on Canvas |
 | Mon 9 Nov | Round 2 predictions due on Canvas |
-| Wed 11 Nov | Round 2 scores and leaderboard emailed |
+| Wed 11 Nov | Round 2 scores and leaderboard posted on Canvas |
 | Fri 13 Nov, 5 pm | Canvas closes, your last upload is your final entry |
-| Sun 15 Nov | Final scores emailed |
+| Sun 15 Nov | Final scores posted on Canvas |
 | Mon 16 and Wed 18 Nov | Oral presentations |
 | Fri 20 Nov | Written report and code due |
 
