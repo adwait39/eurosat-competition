@@ -99,7 +99,7 @@ or in MATLAB, from the folder holding `sample_submission.csv`:
 check_submission('my_submission.csv')
 ```
 
-Both compare your file against `sample_submission.csv` and either accepts it or
+Both compare your file against `sample_submission.csv` and either accept it or
 tells you exactly what is wrong. Neither needs the test images, and neither can
 tell you your score, because they have no labels. They answer one question:
 will this be accepted?
