@@ -1,0 +1,37 @@
+# ---------------------------------------------------------------------------
+# NEVER COMMIT THE ANSWER KEY.
+# If it is ever committed, deleting it later does not remove it from the
+# history. You would have to rewrite the history or delete the repository.
+# ---------------------------------------------------------------------------
+answer_key*.csv
+*answer*key*
+key.csv
+
+# Instructor-side tooling that must stay off the public repo
+make_leaderboard.py
+score_submission.py
+make_package.py
+add_half.py
+make_mat.py
+leaderboard.csv
+submissions/
+instructor/
+
+# The data goes out as Release attachments, not in git.
+# train.npz alone is 1.38 GB against a 100 MB per-file limit.
+*.npz
+*.mat
+
+# Student submissions, in case any land here by accident
+submission.csv
+*_submission.csv
+!sample_submission.csv
+
+# Usual noise
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+*.png
+!docs/*.png
