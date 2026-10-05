@@ -105,7 +105,7 @@ this in Python and MATLAB.
 Before you upload, check the file:
 
 ```bash
-python check_submission.py my_submission.csv
+python check_submission.py my_submission.csv     # or check_submission('...') in MATLAB
 ```
 
 It tells you whether the file will be accepted, and what to fix if not. It takes

@@ -89,14 +89,20 @@ directly.
 
 ## 4. Check it before you upload
 
-```
+```bash
 python check_submission.py my_submission.csv
 ```
 
-It compares your file against `sample_submission.csv` and either accepts it or
-tells you exactly what is wrong. It does not need the test images and it cannot
-tell you your score, because it has no labels. It answers one question: will
-this be accepted?
+or in MATLAB, from the folder holding `sample_submission.csv`:
+
+```matlab
+check_submission('my_submission.csv')
+```
+
+Both compare your file against `sample_submission.csv` and either accepts it or
+tells you exactly what is wrong. Neither needs the test images, and neither can
+tell you your score, because they have no labels. They answer one question:
+will this be accepted?
 
 A good run looks like this:
 
