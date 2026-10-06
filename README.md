@@ -78,11 +78,19 @@ python view_patches.py --index 17      # one patch, all 13 bands
 python baseline.py
 ```
 
-Per-band averages and variability, 26 numbers per patch, into a random forest.
-No neural network and no use of the spatial arrangement at all. It takes about a
-minute on a laptop and writes a valid `submission.csv`.
+The average brightness of each of the 13 bands, so 13 numbers per patch, into a
+logistic regression. No neural network, and no use of the spatial arrangement at
+all. It runs in well under a minute on a laptop and writes a valid
+`submission.csv`.
 
-This is the score you are trying to beat, and it is deliberately beatable.
+It scores **75.5 percent accuracy** on a validation split, and it is weak on
+purpose. It knows the average colour of a patch and nothing else: not how varied
+the patch is, not how anything is arranged. Its worst class is Highway at 33
+percent, because a road and a parking lot reflect light in much the same way and
+what separates them is shape.
+
+That is the score to beat. Working out why it fails where it does is more useful
+than beating it.
 
 ---
 
