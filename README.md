@@ -121,7 +121,67 @@ fault.
 
 ---
 
-## 6. Dates
+## 6. How the leaderboard works
+
+**The competition carries no marks.** It is here to give you a target, something
+to argue about, and a reason to look hard at your own results. Your report and
+your oral presentation are what count. A team with a simple model and a careful
+report finishes well above a team with a complicated model and a thin one.
+
+### How a team is judged
+
+Only on the predictions file. I never run your code, and nothing about your
+method enters the comparison. Whether you used clustering, a support vector
+machine or a neural network, what reaches me is the same two columns, and the
+same script scores every team against the same answer key.
+
+The measure is **macro-F1**. For each of the ten classes I work out an F1 score,
+which is high only when you find most of that class and do not wrongly label
+other things as it. Then I average the ten, weighting each class equally.
+
+That last part matters. Accuracy lets a model hide a failure: handle nine
+classes well, never predict Pasture at all, and accuracy barely notices because
+Pasture is a small part of the set. Macro-F1 makes you pay a full tenth of your
+score for it.
+
+### How teams are ranked
+
+| | |
+|---|---|
+| Ranked by | macro-F1, highest first |
+| Also shown | overall accuracy, which does not affect position |
+| Ties broken by | accuracy, then by whoever submitted earlier |
+| Which file counts | your most recent upload in that round |
+| Invalid files | do not rank; I tell you which row is at fault so you can fix it |
+
+### The two halves, and why
+
+The 8,100 test patches are split in half at random. You cannot tell which patch
+is in which half.
+
+- The leaderboard during the competition is scored on one half.
+- The final ranking, after the close, is scored on the other half.
+
+This is not about catching anyone out. It is so that the final ranking means
+something. If you tune your model by watching the leaderboard rather than by
+using your own validation set, your final score drops when the other half is
+revealed, and the size of that gap tells you exactly how much you were fitting
+the leaderboard instead of the problem. That is worth knowing, and it is a good
+thing to write about in your report.
+
+### How this stays fair across different methods
+
+- The same training data, test data, answer key, scoring script and deadlines
+  for every team.
+- No pretrained weights and no outside data, so no team starts ahead.
+- Nothing is ranked against a threshold or a quota. Two teams with the same
+  score get the same position.
+- Which half is which is hidden from everyone equally, and was fixed before the
+  competition opened.
+
+---
+
+## 7. Dates
 
 | Date | What happens |
 |---|---|
@@ -137,16 +197,16 @@ fault.
 
 ---
 
-## 7. The rules, briefly
+## 8. The rules, briefly
 
 1. Train from scratch on the released training data. No pretrained weights, and
    no data from outside this package.
-2. Fit everything using the training data only. The test patches may be used to
-   predict, not to fit. Do not compute normalisation statistics or anything else
-   from them.
-3. Do not go looking for the test labels. EuroSAT is a public dataset, so in
-   principle they could be traced. Doing that breaks the honour code, and with
-   10 marks at stake it is a poor trade.
+2. Work out your normalisation and anything else you fit from the training data
+   only. If you do use the unlabelled test patches for something, say so in your
+   report; it is an interesting choice, not a hidden one.
+3. Do not go looking for the test labels. EuroSAT is public, so in principle
+   they could be traced. There is nothing to win by it: the leaderboard carries
+   no marks, so you would be writing a lookup script for a round of applause.
 4. Work within your own team. Do not share code or predictions with another
    team. If I answer a question that everyone should hear, I send it to the
    whole class.
@@ -154,14 +214,13 @@ fault.
    could repeat your work. It is not run to produce your score.
 6. Declare any use of generative AI as the course policy requires.
 
-The full competition guide, covering how scoring works, how marks are awarded,
-and how teams using different methods are compared on the same footing, is on
-Canvas. Read its section 6 if you are wondering whether clustering puts you at a
-disadvantage against a neural network. It does not.
+The full competition guide is on Canvas, along with the submission guidelines
+for the report and the oral presentation, which are where your marks actually
+come from.
 
 ---
 
-## 8. Questions
+## 9. Questions
 
 Email me at **adde8370@colorado.edu** with `ASEN 6337` in the subject line. If a
 question turns out to matter for everybody, I will answer it to the whole class
