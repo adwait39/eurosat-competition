@@ -197,30 +197,13 @@ thing to write about in your report.
 
 ---
 
-## 8. The rules, briefly
-
-1. Train from scratch on the released training data. No pretrained weights, and
-   no data from outside this package.
-2. Work out your normalisation and anything else you fit from the training data
-   only. If you do use the unlabelled test patches for something, say so in your
-   report; it is an interesting choice, not a hidden one.
-3. Do not go looking for the test labels. EuroSAT is public, so in principle
-   they could be traced. There is nothing to win by it: the leaderboard carries
-   no marks, so you would be writing a lookup script for a round of applause.
-4. Work within your own team. Do not share code or predictions with another
-   team. If I answer a question that everyone should hear, I send it to the
-   whole class.
-5. Hand in your code with the report. It is read to judge whether someone else
-   could repeat your work. It is not run to produce your score.
-6. Declare any use of generative AI as the course policy requires.
-
 The full competition guide is on Canvas, along with the submission guidelines
 for the report and the oral presentation, which are where your marks actually
-come from.
+come from. The rules for the competition are in that guide.
 
 ---
 
-## 9. Questions
+## 8. Questions
 
 Email me at **adde8370@colorado.edu** with `ASEN 6337` in the subject line. If a
 question turns out to matter for everybody, I will answer it to the whole class
